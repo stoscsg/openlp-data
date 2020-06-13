@@ -9,7 +9,7 @@
         <bold>False</bold>
         <italics>False</italics>
         <line_adjustment>0</line_adjustment>
-        <location height="200" override="True" width="1910" x="10" y="780"/>
+        <location height="200" override="True" width="1900" x="10" y="780"/>
         <shadow shadowColor="#000000" shadowSize="3">True</shadow>
         <outline outlineColor="#000000" outlineSize="1">True</outline>
     </font>
