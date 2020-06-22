@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme version="2.0">
     <name>OBS Out</name>
-    <background type="transparent"/>
+    <background type="solid">
+        <color>#000000</color>
+    </background>
     <font type="main">
         <name>Arial</name>
         <color>#FFFFFF</color>
-        <size>35</size>
+        <size>30</size>
         <bold>False</bold>
         <italics>False</italics>
         <line_adjustment>0</line_adjustment>
@@ -25,7 +27,7 @@
         <outline outlineColor="#000000" outlineSize="2">False</outline>
     </font>
     <display>
-        <horizontalAlign>2</horizontalAlign>
+        <horizontalAlign>0</horizontalAlign>
         <verticalAlign>2</verticalAlign>
         <slideTransition>False</slideTransition>
     </display>
