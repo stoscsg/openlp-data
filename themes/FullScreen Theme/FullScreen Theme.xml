@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme version="2.0">
+    <name>FullScreen Theme</name>
+    <background type="image">
+        <filename>theme BG.png</filename>
+        <borderColor>#d81d5f</borderColor>
+    </background>
+    <font type="main">
+        <name>Helvetica</name>
+        <color>#FFFFFF</color>
+        <size>49</size>
+        <bold>False</bold>
+        <italics>False</italics>
+        <line_adjustment>4</line_adjustment>
+        <location height="962" override="True" width="1900" x="20" y="20"/>
+        <shadow shadowColor="#000000" shadowSize="5">True</shadow>
+        <outline outlineColor="#000000" outlineSize="2">False</outline>
+    </font>
+    <font type="footer">
+        <name>Arial</name>
+        <color>#FFFFFF</color>
+        <size>12</size>
+        <bold>False</bold>
+        <italics>False</italics>
+        <line_adjustment>0</line_adjustment>
+        <location height="108" override="False" width="1900" x="10" y="972"/>
+        <shadow shadowColor="#000000" shadowSize="5">True</shadow>
+        <outline outlineColor="#000000" outlineSize="2">False</outline>
+    </font>
+    <display>
+        <horizontalAlign>0</horizontalAlign>
+        <verticalAlign>1</verticalAlign>
+        <slideTransition>True</slideTransition>
+    </display>
+</theme>
