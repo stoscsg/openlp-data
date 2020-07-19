@@ -6,7 +6,7 @@
         <borderColor>#d81d5f</borderColor>
     </background>
     <font type="main">
-        <name>Helvetica</name>
+        <name>MS Shell Dlg 2</name>
         <color>#FFFFFF</color>
         <size>49</size>
         <bold>False</bold>
