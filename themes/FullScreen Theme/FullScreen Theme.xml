@@ -6,9 +6,9 @@
         <borderColor>#d81d5f</borderColor>
     </background>
     <font type="main">
-        <name>MS Shell Dlg 2</name>
+        <name>Rachana</name>
         <color>#FFFFFF</color>
-        <size>49</size>
+        <size>45</size>
         <bold>False</bold>
         <italics>False</italics>
         <line_adjustment>4</line_adjustment>
@@ -29,7 +29,7 @@
     </font>
     <display>
         <horizontalAlign>0</horizontalAlign>
-        <verticalAlign>1</verticalAlign>
+        <verticalAlign>0</verticalAlign>
         <slideTransition>True</slideTransition>
     </display>
 </theme>
