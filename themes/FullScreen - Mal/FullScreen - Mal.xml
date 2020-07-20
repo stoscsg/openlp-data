@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme version="2.0">
-    <name>FullScreen Theme</name>
+    <name>FullScreen - Mal</name>
     <background type="image">
-        <filename>themebg1.jpg</filename>
-        <borderColor>#d81d5f</borderColor>
+        <filename>theme1.png</filename>
+        <borderColor>#8f0a22</borderColor>
     </background>
     <font type="main">
         <name>Rachana</name>
@@ -11,19 +11,19 @@
         <size>45</size>
         <bold>False</bold>
         <italics>False</italics>
-        <line_adjustment>4</line_adjustment>
-        <location height="962" override="True" width="1900" x="20" y="20"/>
+        <line_adjustment>8</line_adjustment>
+        <location height="1000" override="True" width="1860" x="30" y="30"/>
         <shadow shadowColor="#000000" shadowSize="5">True</shadow>
         <outline outlineColor="#000000" outlineSize="2">False</outline>
     </font>
     <font type="footer">
         <name>Arial</name>
         <color>#FFFFFF</color>
-        <size>12</size>
+        <size>8</size>
         <bold>False</bold>
         <italics>False</italics>
         <line_adjustment>0</line_adjustment>
-        <location height="108" override="False" width="1900" x="10" y="972"/>
+        <location height="80" override="True" width="1900" x="10" y="1000"/>
         <shadow shadowColor="#000000" shadowSize="5">True</shadow>
         <outline outlineColor="#000000" outlineSize="2">False</outline>
     </font>
