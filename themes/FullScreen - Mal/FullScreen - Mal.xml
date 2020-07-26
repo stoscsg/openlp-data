@@ -8,7 +8,7 @@
     <font type="main">
         <name>Rachana</name>
         <color>#FFFFFF</color>
-        <size>45</size>
+        <size>48</size>
         <bold>False</bold>
         <italics>False</italics>
         <line_adjustment>8</line_adjustment>
@@ -19,7 +19,7 @@
     <font type="footer">
         <name>Arial</name>
         <color>#FFFFFF</color>
-        <size>8</size>
+        <size>0</size>
         <bold>False</bold>
         <italics>False</italics>
         <line_adjustment>0</line_adjustment>
