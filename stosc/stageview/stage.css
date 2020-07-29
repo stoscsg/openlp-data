@@ -18,7 +18,7 @@
 ******************************************************************************/
 
 body {
-  background-color: #c83349;
+  background-color: #700213;
   font-family: sans-serif;
   overflow: hidden;
   background-image:url("themebg.png");
@@ -28,7 +28,7 @@ body {
 }
 
 #currentslide {
-  font-size: 44pt;
+  font-size: 8.5vh;
   color: white;
   padding-bottom: 0px;
 }
