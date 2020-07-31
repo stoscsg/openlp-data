@@ -2,7 +2,7 @@
 <theme version="2.0">
     <name>FullScreen - Mal</name>
     <background type="image">
-        <filename>theme1.png</filename>
+        <filename>themebg.png</filename>
         <borderColor>#8f0a22</borderColor>
     </background>
     <font type="main">
