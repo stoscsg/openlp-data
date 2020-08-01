@@ -16,55 +16,17 @@
 * with this program; if not, write to the Free Software Foundation, Inc., 59  *
 * Temple Place, Suite 330, Boston, MA 02111-1307 USA                          *
 ******************************************************************************/
-
 body {
-  background-color: #700213;
+  background-color: #8f0a22;
   font-family: sans-serif;
   overflow: hidden;
-  background-image:url("themebg.png");
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background-size:cover;
 }
 
-#currentslide {
-  font-size: 7.5vh;
-  color: white;
-  padding-bottom: 0px;
-}
-
-#nextslide {
-  font-size: 26pt;
-  color: black;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  opacity:0.5;
-}
-
-#right {
-  float: right;
-}
-
-#clock {
-  font-size: 30pt;
-  color: yellow;
-  text-align: right;
-  display:none;
-}
-
-#notes {
-  font-size: 36pt;
-  color: salmon;
-  text-align: right;
-}
-
-#verseorder {
-  font-size: 10pt;
-  color: pink;
-  text-align: left;
-}
-
-.currenttag {
-   color: lightgreen;
-   font-weight: bold;
+.size {
+    position: absolute;
+    top: 0px;
+    vertical-align: middle;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
