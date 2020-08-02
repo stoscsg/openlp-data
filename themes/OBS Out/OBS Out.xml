@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme version="2.0">
     <name>OBS Out</name>
-    <background type="solid">
-        <color>#000000</color>
-    </background>
+    <background type="transparent"/>
     <font type="main">
-        <name>Arial</name>
+        <name>Rachana</name>
         <color>#FFFFFF</color>
         <size>30</size>
         <bold>False</bold>
