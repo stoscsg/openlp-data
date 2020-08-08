@@ -22,13 +22,20 @@
 -->
 <head>
   <meta charset="utf-8" />
-  <title>${live_title}</title>
-  <link rel="stylesheet" href="/files/main.css" />
+  <title>${stage_title}</title>
+  <link rel="stylesheet" href="/files/stage.css" />
   <link rel="shortcut icon" type="image/x-icon" href="/files/images/favicon.ico">
   <script type="text/javascript" src="/files/jquery.min.js"></script>
-  <script type="text/javascript" src="/files/main.js"></script>
+  <script type="text/javascript" src="/files/stage.js"></script>
 </head>
 <body>
-<img id="image" class="size"/>
+<input type="hidden" id="next-text" value="${next}" />
+<div id="right">
+  <div id="clock"></div>
+  <div id="notes"></div>
+</div>
+<!--<div id="verseorder"></div>-->
+<div id="currentslide"></div>
+<!--<div id="nextslide"></div>-->
 </body>
 </html>
