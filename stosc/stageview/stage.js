@@ -102,13 +102,19 @@ window.OpenLP = {
     } else {
         text = slide["html"];
     }
-    // use thumbnail if available
+    // if image use image from main
     if (slide["img"]) {
-        text += "<br /><img src='" + slide["img"].replace("/thumbnails/", "/thumbnails320x240/") + "'><br />";
+		OpenLP.loadSlide();
+		text="";
+        //text += "<br /><img src='" + slide["img"].replace("/thumbnails/", "/thumbnails320x240/") + "'><br />";
     }
+	else{
+		var img = document.getElementById('image');        
+		img.src ="";
+	}
     // use notes if available
     if (slide["slide_notes"]) {
-        text += '<br />' + slide["slide_notes"];
+        // text += '<br />' + slide["slide_notes"];
     }
     text = text.replace(/\n/g, "<br />");
     $("#currentslide").html(text);
@@ -145,6 +151,16 @@ window.OpenLP = {
     if (m < 10)
       m = '0' + m + '';
     div.html(h + ":" + m);
+  },
+  loadSlide: function (event) {
+    $.getJSON(
+      "/main/image",
+      function (data, status) {
+        var img = document.getElementById('image');
+        img.src = data.results.slide_image;
+        img.style.display = 'block';
+      }
+    );
   },
   pollServer: function () {
     $.getJSON(

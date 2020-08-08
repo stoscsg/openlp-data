@@ -27,11 +27,20 @@ body {
   background-size:cover;
 }
 
+#image{
+    position: absolute;
+    top: 0px;
+    vertical-align: middle;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 #currentslide {
   font-size: 7.5vh;
   color: white;
   padding-bottom: 0px;
-  text-shadow: 3px 3px 4px #000000;
+  text-shadow: 6px 6px 12px #000000;
 }
 
 #nextslide {
