@@ -8,11 +8,11 @@
     <font type="main">
         <name>Rachana</name>
         <color>#FFFFFF</color>
-        <size>70</size>
+        <size>66</size>
         <bold>False</bold>
         <italics>False</italics>
         <line_adjustment>8</line_adjustment>
-        <location height="1000" override="True" width="1860" x="30" y="30"/>
+        <location height="980" override="True" width="1860" x="30" y="50"/>
         <shadow shadowColor="#000000" shadowSize="4">True</shadow>
         <outline outlineColor="#000000" outlineSize="2">False</outline>
     </font>
