@@ -19,12 +19,13 @@
 
 body {
   background-color: #700213;
-  font-family: sans-serif;
+  font-family: "Rachana Regular", "Ariel";
   overflow: hidden;
   background-image:url("themebg.png");
   background-repeat:no-repeat;
   background-attachment:fixed;
   background-size:cover;
+  margin:30px;  
 }
 
 #image{
@@ -37,7 +38,8 @@ body {
 }
 
 #currentslide {
-  font-size: 7.5vh;
+  font-size: 8vh;
+  line-height: 1.1;
   color: white;
   padding-bottom: 0px;
   text-shadow: 3px 3px 4px #000000;
