@@ -17,6 +17,8 @@
 * Temple Place, Suite 330, Boston, MA 02111-1307 USA                          *
 ******************************************************************************/
 
+/* background-color: #700213;*/
+
 body {
   background-color: #700213;
   font-family: "Rachana Regular", "Ariel";
@@ -45,14 +47,21 @@ body {
   text-shadow: 3px 3px 4px #000000;
 }
 
-#nextslide {
+#nextslide_old {
   font-size: 26pt;
   color: black;
   padding-top: 0px;
   padding-bottom: 0px;
-  opacity:0.5;
+  opacity:0.4;
 }
-
+#nextslide {
+ font-size: 7vh;
+  line-height: 1;
+  color: white;
+  padding-bottom: 0px;
+  text-shadow: 3px 3px 4px #000000;
+  opacity:0.2;
+}
 #right {
   float: right;
 }
