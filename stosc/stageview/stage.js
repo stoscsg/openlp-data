@@ -117,9 +117,10 @@ window.OpenLP = {
         // text += '<br />' + slide["slide_notes"];
     }
     text = text.replace(/\n/g, "<br />");
-    $("#currentslide").html(text);
-    text = "";
-    if (OpenLP.currentSlide < OpenLP.currentSlides.length - 1) {
+    $("#currentslide").html(text); 
+	text = "";	
+    if (OpenLP.currentSlide < OpenLP.currentSlides.length - 1 && slide["html"].replace(/\n/g, "")) {
+	
       for (var idx = OpenLP.currentSlide + 1; idx < OpenLP.currentSlides.length; idx++) {
         if (OpenLP.currentTags[idx] != OpenLP.currentTags[idx - 1])
             text = text + "<p class=\"nextslide\">";
@@ -136,8 +137,9 @@ window.OpenLP = {
       text = text.replace(/\n/g, "<br />");
       $("#nextslide").html(text);
     }
-    else {
-      text = "<p class=\"nextslide\">" + $("#next-text").val() + ": " + OpenLP.nextSong + "</p>";
+    else {	 
+      //text = "<p class=\"nextslide\">" + $("#next-text").val() + ": " + OpenLP.nextSong + "</p>";
+	  text = "";
       $("#nextslide").html(text);
     }
   },
