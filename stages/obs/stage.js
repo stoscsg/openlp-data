@@ -1,10 +1,8 @@
 window.OpenLP = {
   loadService: function (event) {
-    console.log("[OpenLP Debug] Calling /api/service/list");
     $.getJSON(
       "/api/service/list",
       function (data, status) {
-        console.log("[OpenLP Debug] /api/service/list response:", data, "status:", status);
 
         OpenLP.nextSong = "";
         $("#notes").html("");
@@ -12,13 +10,11 @@ window.OpenLP = {
         for (idx in data.results.items) {
           idx = parseInt(idx, 10);
           const item = data.results.items[idx];
-          console.log(`[OpenLP Debug] Service Item ${idx}:`, item);
 
           if (item["selected"]) {
             $("#notes").html(item["notes"].replace(/\n/g, "<br />"));
             if (data.results.items.length > idx + 1) {
               OpenLP.nextSong = data.results.items[idx + 1]["title"];
-              console.log("[OpenLP Debug] Next song:", OpenLP.nextSong);
             }
             break;
           }
@@ -30,11 +26,9 @@ window.OpenLP = {
   },
 
   loadSlides: function (event) {
-    console.log("[OpenLP Debug] Calling /api/controller/live/text");
     $.getJSON(
       "/api/controller/live/text",
       function (data, status) {
-        console.log("[OpenLP Debug] /api/controller/live/text response:", data, "status:", status);
 
         OpenLP.currentSlides = data.results.slides;
         OpenLP.currentSlide = 0;
@@ -47,7 +41,6 @@ window.OpenLP = {
         var lastChange = 0;
 
         $.each(data.results.slides, function(idx, slide) {
-          console.log(`[OpenLP Debug] Slide ${idx}:`, slide);
 
           var prevtag = tag;
           tag = slide["tag"];
@@ -56,7 +49,6 @@ window.OpenLP = {
             tags++;
             div.append("&nbsp;<span>");
             $("#verseorder span").last().attr("id", "tag" + tags).text(tag);
-            console.log(`[OpenLP Debug] New tag ${tag} at slide ${idx}, tag ID: tag${tags}`);
           }
           else {
             if ((slide["text"] === data.results.slides[lastChange]["text"]) &&
@@ -74,7 +66,6 @@ window.OpenLP = {
                 tags++;
                 div.append("&nbsp;<span>");
                 $("#verseorder span").last().attr("id", "tag" + tags).text(tag);
-                console.log(`[OpenLP Debug] Repeated tag ${tag} at slide ${idx}, tag ID: tag${tags}`);
               }
             }
           }
@@ -83,7 +74,6 @@ window.OpenLP = {
 
           if (slide["selected"]) {
             OpenLP.currentSlide = idx;
-            console.log(`[OpenLP Debug] Current slide index set to: ${idx}`);
           }
         });
 
@@ -93,29 +83,21 @@ window.OpenLP = {
   },
 
   updateSlide: function() {
-    console.log("[OpenLP Debug] Updating current slide");
 
     $("#verseorder span").removeClass("currenttag");
     const currentTagId = "tag" + OpenLP.currentTags[OpenLP.currentSlide];
-    console.log(`[OpenLP Debug] Current tag ID: ${currentTagId}`);
     $("#"+currentTagId).addClass("currenttag");
 
     var slide = OpenLP.currentSlides[OpenLP.currentSlide];
-    console.log("[OpenLP Debug] Current Slide:", slide);
 
     var text = slide["html"] || "";
 
     if (slide["img"]) {
-      console.log("[OpenLP Debug] Slide has image, calling loadSlide()");
       OpenLP.loadSlide();
       text = "";
     } else {
       var img = document.getElementById('image');
       img.src = "";
-    }
-
-    if (slide["slide_notes"]) {
-      console.log("[OpenLP Debug] Slide has notes (not shown):", slide["slide_notes"]);
     }
 
     text = text.replace(/\n/g, "<br />");
@@ -142,6 +124,8 @@ window.OpenLP = {
       text = "<p class=\"nextslide\">" + $("#next-text").val() + ": " + OpenLP.nextSong + "</p>";
       $("#nextslide").html(text);
     }
+    // Set page title to current slide title
+    document.title = OpenLP.currentSlides[OpenLP.currentSlide]["title"] || "Next Slide";
   },
 
   updateClock: function(data) {
@@ -157,11 +141,9 @@ window.OpenLP = {
   },
 
   loadSlide: function (event) {
-    console.log("[OpenLP Debug] Calling /main/image to load slide image");
     $.getJSON(
       "/main/image",
       function (data, status) {
-        console.log("[OpenLP Debug] /main/image response:", data, "status:", status);
         var img = document.getElementById('image');
         img.src = data.results.slide_image;
         img.style.display = 'block';
@@ -177,12 +159,10 @@ window.OpenLP = {
 
         if (OpenLP.currentItem != data.results.item ||
             OpenLP.currentService != data.results.service) {
-          console.log("[OpenLP Debug] Service or item has changed. Reloading slides...");
           OpenLP.currentItem = data.results.item;
           OpenLP.currentService = data.results.service;
           OpenLP.loadSlides();
         } else if (OpenLP.currentSlide != data.results.slide) {
-          console.log(`[OpenLP Debug] Slide has changed from ${OpenLP.currentSlide} to ${data.results.slide}`);
           OpenLP.currentSlide = parseInt(data.results.slide, 10);
           OpenLP.updateSlide();
         }
