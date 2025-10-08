@@ -1,0 +1,92 @@
+/******************************************************************************
+* OpenLP - Open Source Lyrics Projection                                      *
+* --------------------------------------------------------------------------- *
+* Copyright (c) 2008-2017 OpenLP Developers                                   *
+* --------------------------------------------------------------------------- *
+* This program is free software; you can redistribute it and/or modify it     *
+* under the terms of the GNU General Public License as published by the Free  *
+* Software Foundation; version 2 of the License.                              *
+*                                                                             *
+* This program is distributed in the hope that it will be useful, but WITHOUT *
+* ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or       *
+* FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for    *
+* more details.                                                               *
+*                                                                             *
+* You should have received a copy of the GNU General Public License along     *
+* with this program; if not, write to the Free Software Foundation, Inc., 59  *
+* Temple Place, Suite 330, Boston, MA 02111-1307 USA                          *
+******************************************************************************/
+
+/* background-color: #700213;*/
+
+body {
+  background-color: #700213;
+  font-family: "Rachana", "sans-serif", "Arial";
+  overflow: hidden;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
+  margin:30px;  
+}
+
+#image{
+    position: absolute;
+    top: 0px;
+    vertical-align: middle;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#currentslide {
+  font-size: 8vh;
+  line-height: 1.1;
+  color: white;
+  padding-bottom: 0px;
+  text-shadow: 3px 3px 4px #000000;
+}
+
+#nextslide_old {
+  font-size: 26pt;
+  color: black;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  opacity:0.4;
+  display: none;
+}
+#nextslide {
+ font-size: 7vh;
+  line-height: 1;
+  color: white;
+  padding-bottom: 0px;
+  text-shadow: 3px 3px 4px #000000;
+  opacity:0.2;
+  display: none;
+}
+#right {
+  float: right;
+}
+
+#clock {
+  font-size: 30pt;
+  color: yellow;
+  text-align: right;
+  display:none;
+}
+
+#notes {
+  font-size: 36pt;
+  color: salmon;
+  text-align: right;
+}
+
+#verseorder {
+  font-size: 10pt;
+  color: pink;
+  text-align: left;
+}
+
+.currenttag {
+   color: lightgreen;
+   font-weight: bold;
+}
