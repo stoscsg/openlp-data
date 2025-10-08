@@ -25,7 +25,7 @@
 
 5. **Install required fonts**
 
-   * [Malayalam Font](https://www.malayalamfont.com/download.php?id=878)
+   * [Malayalam Font](https://www.malayalamfont.com/download.php)
    * [Nirmala UI](https://www.wfonts.com/font/nirmala-ui)
 
 ---
